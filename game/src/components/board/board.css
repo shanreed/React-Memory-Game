@@ -1,0 +1,15 @@
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.board-card {
+  padding: .4rem;
+  margin: 15% auto;
+  width: 23rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+

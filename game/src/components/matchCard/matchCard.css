@@ -1,0 +1,17 @@
+.match-card{
+  flex: 1
+}
+
+.match-card:hover{
+  cursor: pointer;
+}
+
+.match-card img{
+  width: 5rem;
+  height: 5rem;
+  /* width: 60%; */
+}
+
+.match-card-pic {
+  
+}
