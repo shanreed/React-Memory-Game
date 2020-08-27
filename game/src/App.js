@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Board from './components/board/board'
-import backImg from './img/back.png'
+import cardBack from './img/cardBack.jpg'
 import mail from './img/mail.jpg'
 import dementors from './img/dementors.jpg'
 import room from './img/room.jpg'
@@ -21,7 +21,7 @@ function App() {
       const getCard = () => ({
         id: id++,
         type: item,
-        backImg,
+        cardBack,
         frontImg: images[item],
         flipped: false,
       })
