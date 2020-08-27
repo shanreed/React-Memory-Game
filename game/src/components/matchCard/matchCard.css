@@ -1,5 +1,6 @@
 .match-card{
-  flex: 1
+  flex: 1;
+  
 }
 
 .match-card:hover{
@@ -13,5 +14,7 @@
 }
 
 .match-card-pic {
-  
+  -webkit-box-shadow: -2px -1px 19px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px -1px 19px -2px rgba(0,0,0,0.75);
+  box-shadow: -2px -1px 19px -2px rgba(0,0,0,0.75);
 }
