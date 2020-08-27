@@ -13,3 +13,10 @@
   flex-wrap: wrap;
 }
 
+@media(min-width: 1000px) {
+  .board-card {
+    margin: 5% auto;
+  }
+  
+}
+

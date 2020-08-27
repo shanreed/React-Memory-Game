@@ -1,6 +1,5 @@
 .App {
-  background: rgb(128, 128, 240);
-  height: 100vh;
+  height: cover;
   padding-top: 2rem;
 }
 
@@ -16,4 +15,6 @@ p {
   text-align: center;
   padding: 0 3rem;
 }
+
+
 

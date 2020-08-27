@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Card } from 'react-bootstrap';
 
+import { checkersFull, cardAlreadyInCheckers, validateCheckers } from './boardUtils';
 import MatchCard from '../matchCard/matchCard'
 import './board.css'
 
@@ -25,16 +26,7 @@ const Board = props => {
     if (checkersFull(newCheckers)) {
       resetCheckersAfter(1000)
     }
-    function validateCheckers(compareCards){
-      return compareCards.length === 2 &&
-      compareCards[0].name === compareCards[1].name
-    }
-    function cardAlreadyInCheckers(compareCards, card){
-      return compareCards.length === 1 && compareCards[0].id === card.id
-    }
-    function checkersFull(compareCards){
-      return compareCards.length === 2
-    }
+
     function resetCheckersAfter(time) {
       setTimeout(() => {
         setCompareCards([])
