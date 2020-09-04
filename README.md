@@ -4,7 +4,7 @@
 
 
 Match Card Game with 20 cards, 10 differnt cards each card has a match making it 20 cards total 
-####[Concepts](https://medium.com/@cqpro/lets-build-a-matching-card-game-with-react-d8923d915e46)
+#### Concepts
 - React
 - Hooks
 - React-Bootstrap
@@ -14,7 +14,7 @@ Match Card Game with 20 cards, 10 differnt cards each card has a match making it
  - Math.floor(Math.random())
 - [Pure Functions](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
 
-#Each Card has the folowing
+# Each Card has the following
 - way to check to see if two cards clicked match
 - id/unique
 - when card is not clicked state/action/img
@@ -27,3 +27,6 @@ Match Card Game with 20 cards, 10 differnt cards each card has a match making it
     - if they match they leave them clicked/open
     - if they do not match turn them back over
 - Each card has a match, both will have the same type but different ids
+
+
+ *Getting an error: `React Hook useEffect has a missing dependency: 'cards'. Either include it or remove the dependency array,` but when I include cards the app stops working*

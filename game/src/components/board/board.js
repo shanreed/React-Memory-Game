@@ -42,6 +42,7 @@ const Board = props => {
         matchedCards.includes(card.name),
     }))
     setCards(newCards)
+    
   }, [compareCards, matchedCards])
 
   return (
