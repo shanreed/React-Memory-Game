@@ -1,6 +1,6 @@
 # React-Memory-Game
-[x] Create a Match Game
-[ ] Add timer
+- [x] Create a Match Game
+- [ ] Add timer
 
 
 Match Card Game with 20 cards, 10 differnt cards each card has a match making it 20 cards total 
