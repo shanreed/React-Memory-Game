@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Card } from 'react-bootstrap';
 
-import { checkersFull, cardAlreadyInCheckers, validateCheckers } from './boardUtils';
+import { checkerHasTwo, cardAlreadyClicked, checkCards } from './boardUtils';
 import MatchCard from '../matchCard/matchCard'
 import './board.css'
 
@@ -16,14 +16,14 @@ const Board = props => {
 
   
   const onCardClick = card => () => {
-    if (checkersFull(compareCards) || cardAlreadyInCheckers(compareCards, card)) return
+    if (checkerHasTwo(compareCards) || cardAlreadyClicked(compareCards, card)) return
     const newCheckers = [...compareCards, card]
     setCompareCards(newCheckers)
-    const cardsInCheckersMatched = validateCheckers(newCheckers)
+    const cardsInCheckersMatched = checkCards(newCheckers)
     if (cardsInCheckersMatched) {
       setMatchedCards([...matchedCards, newCheckers[0].name])
     }
-    if (checkersFull(newCheckers)) {
+    if (checkerHasTwo(newCheckers)) {
       resetCheckersAfter(1000)
     }
 

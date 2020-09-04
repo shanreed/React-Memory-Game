@@ -11,8 +11,9 @@ Match Card Game with 20 cards, 10 differnt cards each card has a match making it
 - Arrays
  - length
  - reduce
- - Math.floor(Math.random())
-- [Pure Functions](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976)
+ - Math.floor
+ - Math.random
+ - Pure Functions
 
 # Each Card has the following
 - way to check to see if two cards clicked match
