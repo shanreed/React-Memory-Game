@@ -1,6 +1,9 @@
 # React-Memory-Game
 - [x] Create a Match Game
 - [ ] Add timer
+- [ ] Add the ability to turn cards back over and shuffle whne game is come plete
+- [ ] Add the ability to have the game timed
+
 
 
 Match Card Game with 20 cards, 10 differnt cards each card has a match making it 20 cards total 
