@@ -1,40 +1,35 @@
 import React, {useState, useEffect} from 'react'
 import { Card } from 'react-bootstrap';
 
+import { checkersFull, cardAlreadyInCheckers, validateCheckers } from './boardUtils';
 import MatchCard from '../matchCard/matchCard'
 import './board.css'
 
 const Board = props => {
   const [cards, setCards] = useState(props.cards)
-  const [checkers, setCheckers] = useState([])
-  const [completed, setCompleted] = useState([])
+
+  //Need an array to hold the matched cards and the cards 
+  //that have been clicked to be checked to see if they are a match
+  const [compareCards, setCompareCards] = useState([])//array to store two cards to compare
+  const [matchedCards, setMatchedCards] = useState([])//array to store the cards that have been matched
 
 
   
   const onCardClick = card => () => {
-    if (checkersFull(checkers) || cardAlreadyInCheckers(checkers, card)) return
-    const newCheckers = [...checkers, card]
-    setCheckers(newCheckers)
+    if (checkersFull(compareCards) || cardAlreadyInCheckers(compareCards, card)) return
+    const newCheckers = [...compareCards, card]
+    setCompareCards(newCheckers)
     const cardsInCheckersMatched = validateCheckers(newCheckers)
     if (cardsInCheckersMatched) {
-      setCompleted([...completed, newCheckers[0].type])
+      setMatchedCards([...matchedCards, newCheckers[0].name])
     }
     if (checkersFull(newCheckers)) {
       resetCheckersAfter(1000)
     }
-    function validateCheckers(checkers){
-      return checkers.length === 2 &&
-      checkers[0].type === checkers[1].type
-    }
-    function cardAlreadyInCheckers(checkers, card){
-      return checkers.length === 1 && checkers[0].id === card.id
-    }
-    function checkersFull(checkers){
-      return checkers.length === 2
-    }
+
     function resetCheckersAfter(time) {
       setTimeout(() => {
-        setCheckers([])
+        setCompareCards([])
       }, time)
     }
   }
@@ -43,11 +38,12 @@ const Board = props => {
     const newCards = cards.map(card => ({
       ...card,
       flipped:
-        checkers.find(c => c.id === card.id) ||
-        completed.includes(card.type),
+        compareCards.find(c => c.id === card.id) ||
+        matchedCards.includes(card.name),
     }))
     setCards(newCards)
-  }, [checkers, completed])
+    
+  }, [compareCards, matchedCards])
 
   return (
     <div className="board">

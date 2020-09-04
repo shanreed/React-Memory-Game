@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background: rgb(128, 128, 240);
+
 }
 ol, ul {
 	list-style: none;

@@ -1,53 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react'
+
+import { makeCards } from './utils'
+
 import Board from './components/board/board'
-import cardBack from './img/cardBack.jpg'
-import mail from './img/mail.jpg'
-import dementors from './img/dementors.jpg'
-import room from './img/room.jpg'
-import wands from './img/wands.jpg'
-import hall from './img/hall.jpg'
-import car from './img/car.jpg'
-import hat from './img/hat.jpg'
-import alley from './img/alley.jpg'
 
 import './App.css';
 
 function App() {
-
-  const makeCards = () => {
-    let id = 0
-    const images = {mail, room, hall, car, alley, wands, hat, dementors}
-    const cards = Object.keys(images).reduce((result, item) => {
-      const getCard = () => ({
-        id: id++,
-        type: item,
-        cardBack,
-        frontImg: images[item],
-        flipped: false,
-      })
-      return [...result, getCard(), getCard()]
-    }, [])
-    return suffle(cards)
-  }
-  
-  const suffle = (arr) => {
-    let len = arr.length
-    for (let i = 0; i < len; i++) {
-      let randomIdx = Math.floor(Math.random() * len)
-      let copyCurrent = {...arr[i]}
-      let copyRandom = {...arr[randomIdx]}
-      arr[i] = copyRandom
-      arr[randomIdx] = copyCurrent
-    }
-    return arr
-  }
-
-
   const cards = makeCards()
-
-
-  
-  
   return (
     <div className="App">
        <h1>React Match Game</h1>
