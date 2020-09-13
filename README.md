@@ -13,11 +13,9 @@ Match Card Game with 20 cards, 10 differnt cards each card has a match making it
 - Hooks
 - React-Bootstrap
 - Arrays
- - length
- - reduce
- - Math.floor
- - Math.random
- - Pure Functions
+- Math.floor
+- Math.random
+- Pure Functions
 
 # Each Card has the following
 - way to check to see if two cards clicked match
