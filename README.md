@@ -2,7 +2,7 @@
 [See React Memory Game In Action](https://react-memory-game-wheat.vercel.app/)
 - [x] Create a Match Game
 - [ ] Add timer
-- [ ] Add the ability to turn cards back over and shuffle whne game is come plete
+- [ ] Add the ability to turn cards back over and shuffle when game is comeplete
 - [ ] Add the ability to have the game timed
 
 
